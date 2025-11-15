@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recipes - Pakora Palace</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .floating-pakora { animation: float 6s ease-in-out infinite; }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+    .filter-btn { color: #6b7280; }
+    .filter-btn.active { background: #f97316; color: white; }
+    .filter-btn:hover { background: #fed7aa; }
+    .recipe-card { display: block; }
+    .recipe-card.hidden { display: none; }
+  </style>
+</head>
+<body class="min-h-screen bg-amber-50">
+
+  <!-- Floating Decorations -->
+  <div class="fixed top-20 left-10 w-16 h-16 opacity-20 animate-float" style="animation-delay: 0s;">
+    <img src="photo/pakora1.png" alt="" class="w-full h-full object-contain floating-pakora">
+  </div>
+  <div class="fixed top-40 right-12 w-20 h-20 opacity-15 animate-float" style="animation-delay: 2s;">
+    <img src="photo/pakora2.png" alt="" class="w-full h-full object-contain floating-pakora">
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-4 z-50 px-4">
+    <div class="max-w-7xl mx-auto bg-white/80 backdrop-blur-sm rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.08)] px-6 py-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center space-x-3">
+          <img src="photo/logo.png" alt="Pakora Palace Logo" class="w-12 h-12 rounded-full">
+          <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Pakora Palace</h1>
+        </div>
+        <nav class="mt-3 md:mt-0">
+          <ul class="flex flex-wrap justify-center space-x-4 md:space-x-6 text-sm md:text-base font-medium text-gray-700">
+            <li><a href="index.html#home" class="hover:text-orange-500 transition">Home</a></li>
+            <li><a href="index.html#menu" class="hover:text-orange-500 transition">Menu</a></li>
+            <li><a href="recipes.html" class="text-orange-500 font-bold">Recipes</a></li>
+            <li><a href="about.html" class="hover:text-orange-500 transition">About</a></li>
+            <li><a href="story.html" class="hover:text-orange-500 transition">Our Story</a></li>
+            <li><a href="offers.html" class="hover:text-orange-500 transition">Offers</a></li>
+            <li><a href="index.html#menu" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full transition">Order Now</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative py-20 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-orange-100 via-amber-50 to-orange-200"></div>
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <h2 class="text-4xl md:text-6xl font-bold mb-4 text-gray-800">50+ Authentic Recipes</h2>
+      <p class="text-xl md:text-2xl text-gray-700">Traditional Pakistani & Indian Snack Recipes</p>
+    </div>
+  </section>
+
+  <!-- Search Section -->
+  <section class="py-8 bg-amber-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-2xl mx-auto mb-6">
+        <div class="relative">
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Search recipes... (e.g., chicken, potato, spicy)" 
+            class="w-full px-6 py-4 pl-14 rounded-full border-2 border-gray-200 focus:border-orange-500 focus:outline-none shadow-[0_10px_30px_rgba(0,0,0,0.05)] text-lg"
+            onkeyup="searchRecipes()"
+          >
+          <i class="fas fa-search absolute left-5 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter -->
+  <section class="py-4 bg-amber-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto bg-white rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.05)] p-2 flex flex-wrap justify-center gap-2">
+        <button onclick="filterRecipes('all')" class="filter-btn active px-6 py-2 rounded-full font-medium">All</button>
+        <button onclick="filterRecipes('vegetarian')" class="filter-btn px-6 py-2 rounded-full font-medium">Vegetarian</button>
+        <button onclick="filterRecipes('non-veg')" class="filter-btn px-6 py-2 rounded-full font-medium">Non-Veg</button>
+        <button onclick="filterRecipes('vegan')" class="filter-btn px-6 py-2 rounded-full font-medium">Vegan</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recipes Grid -->
+  <section class="py-16 bg-amber-50">
+    <div class="container mx-auto px-4">
+      <div id="results-count" class="text-center mb-6 text-gray-600 font-medium"></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="recipes-grid"></div>
+      <div id="no-results" class="hidden text-center py-12">
+        <i class="fas fa-search text-6xl text-gray-300 mb-4"></i>
+        <p class="text-xl text-gray-600">No recipes found. Try a different search term.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 Pakora Palace. All rights reserved. Made with ❤️ in Karachi.</p>
+    </div>
+  </footer>
+
+  <!-- Sidebar Popup -->
+  <div id="sidebarPopup" style="display: none; position: fixed; right: 20px; bottom: 20px; width: 320px; background: white; padding: 25px; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.2); z-index: 9999; animation: slideIn 0.5s ease;">
+    <button onclick="closeSidebarPopup()" style="position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 24px; color: #999; cursor: pointer;">&times;</button>
+    <h3 style="color: #f97316; font-size: 22px; font-weight: bold; margin-bottom: 12px;">🎉 Limited Offer!</h3>
+    <p style="color: #666; font-size: 15px; margin-bottom: 10px;">Get 15% OFF on your first order!</p>
+    <p style="background: #fed7aa; color: #f97316; font-size: 18px; font-weight: bold; padding: 10px; border-radius: 15px; margin-bottom: 15px; text-align: center;">FIRST15</p>
+    <button onclick="closeSidebarPopup(); window.location.href='index.html#menu'" style="width: 100%; background: #f97316; color: white; padding: 12px; border: none; border-radius: 20px; font-size: 16px; font-weight: bold; cursor: pointer; box-shadow: 0 8px 20px rgba(249,115,22,0.3);">Order Now</button>
+  </div>
+
+  <!-- Center Popup -->
+  <div id="discountPopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 9999; justify-content: center; align-items: center;">
+    <div style="background: white; padding: 40px; border-radius: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); max-width: 500px; text-align: center; position: relative;">
+      <button onclick="closePopup()" style="position: absolute; top: 15px; right: 20px; background: none; border: none; font-size: 30px; color: #999; cursor: pointer;">&times;</button>
+      <h2 style="color: #f97316; font-size: 32px; font-weight: bold; margin-bottom: 20px;">🎉 Special Offer!</h2>
+      <p style="color: #666; font-size: 18px; margin-bottom: 15px;">Get 15% OFF on your first order!</p>
+      <p style="background: #fed7aa; color: #f97316; font-size: 24px; font-weight: bold; padding: 15px; border-radius: 20px; margin-bottom: 25px;">Use Code: FIRST15</p>
+      <button onclick="closePopup(); window.location.href='index.html#menu'" style="background: #f97316; color: white; padding: 15px 40px; border: none; border-radius: 30px; font-size: 18px; font-weight: bold; cursor: pointer; box-shadow: 0 10px 30px rgba(249,115,22,0.3);">Order Now</button>
+    </div>
+  </div>
+
+  <style>
+    @keyframes slideIn {
+      from { transform: translateX(400px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+  </style>
+
+  <script>
+    setTimeout(function() {
+      document.getElementById('sidebarPopup').style.display = 'block';
+    }, 15000);
+
+    setTimeout(function() {
+      document.getElementById('discountPopup').style.display = 'flex';
+    }, 900000);
+
+    function closeSidebarPopup() {
+      document.getElementById('sidebarPopup').style.display = 'none';
+    }
+
+    function closePopup() {
+      document.getElementById('discountPopup').style.display = 'none';
+    }
+  </script>
+
+  <script>
+    const recipes = [
+      { name: "Classic Vegetable Pakora", time: "30 min", difficulty: "Easy", category: "vegetarian", desc: "Mixed vegetables in spiced gram flour batter" },
+      { name: "Chicken Pakora", time: "40 min", difficulty: "Medium", category: "non-veg", desc: "Tender chicken pieces in crispy coating" },
+      { name: "Aloo Pakora", time: "25 min", difficulty: "Easy", category: "vegetarian", desc: "Sliced potatoes in gram flour batter" },
+      { name: "Paneer Pakora", time: "30 min", difficulty: "Easy", category: "vegetarian", desc: "Cottage cheese cubes fried to perfection" },
+      { name: "Onion Pakora (Pyaz Pakora)", time: "20 min", difficulty: "Easy", category: "vegan", desc: "Crispy onion fritters with spices" },
+      { name: "Spinach Pakora (Palak Pakora)", time: "25 min", difficulty: "Easy", category: "vegan", desc: "Fresh spinach leaves in batter" },
+      { name: "Bread Pakora", time: "20 min", difficulty: "Easy", category: "vegetarian", desc: "Stuffed bread slices deep fried" },
+      { name: "Cauliflower Pakora (Gobi Pakora)", time: "30 min", difficulty: "Easy", category: "vegan", desc: "Cauliflower florets in spiced batter" },
+      { name: "Fish Pakora", time: "35 min", difficulty: "Medium", category: "non-veg", desc: "Boneless fish in crispy coating" },
+      { name: "Prawn Pakora", time: "30 min", difficulty: "Medium", category: "non-veg", desc: "Juicy prawns in spiced batter" },
+      { name: "Mushroom Pakora", time: "25 min", difficulty: "Easy", category: "vegan", desc: "Button mushrooms fried crispy" },
+      { name: "Egg Pakora", time: "30 min", difficulty: "Medium", category: "vegetarian", desc: "Boiled eggs coated and fried" },
+      { name: "Cheese Pakora", time: "25 min", difficulty: "Easy", category: "vegetarian", desc: "Cheese slices in gram flour" },
+      { name: "Corn Pakora", time: "30 min", difficulty: "Easy", category: "vegan", desc: "Sweet corn kernels in batter" },
+      { name: "Cabbage Pakora", time: "25 min", difficulty: "Easy", category: "vegan", desc: "Shredded cabbage fritters" },
+      { name: "Carrot Pakora", time: "25 min", difficulty: "Easy", category: "vegan", desc: "Grated carrots in spiced batter" },
+      { name: "Beetroot Pakora", time: "30 min", difficulty: "Easy", category: "vegan", desc: "Sliced beetroot fried crispy" },
+      { name: "Banana Pakora (Kele Pakora)", time: "20 min", difficulty: "Easy", category: "vegan", desc: "Raw banana slices fried" },
+      { name: "Chili Pakora (Mirchi Pakora)", time: "25 min", difficulty: "Medium", category: "vegan", desc: "Stuffed green chilies fried" },
+      { name: "Tomato Pakora", time: "25 min", difficulty: "Easy", category: "vegan", desc: "Tomato slices in batter" },
+      { name: "Eggplant Pakora (Baingan Pakora)", time: "30 min", difficulty: "Easy", category: "vegan", desc: "Eggplant slices crispy fried" },
+      { name: "Zucchini Pakora", time: "25 min", difficulty: "Easy", category: "vegan", desc: "Zucchini slices in gram flour" },
+      { name: "Bell Pepper Pakora", time: "25 min", difficulty: "Easy", category: "vegan", desc: "Colorful bell peppers fried" },
+      { name: "Pumpkin Pakora", time: "30 min", difficulty: "Easy", category: "vegan", desc: "Sweet pumpkin in spiced batter" },
+      { name: "Radish Pakora (Mooli Pakora)", time: "25 min", difficulty: "Easy", category: "vegan", desc: "Grated radish fritters" },
+      { name: "Methi Pakora (Fenugreek)", time: "30 min", difficulty: "Easy", category: "vegan", desc: "Fresh fenugreek leaves fried" },
+      { name: "Coriander Pakora", time: "25 min", difficulty: "Easy", category: "vegan", desc: "Fresh coriander in batter" },
+      { name: "Mint Pakora", time: "25 min", difficulty: "Easy", category: "vegan", desc: "Fresh mint leaves fried crispy" },
+      { name: "Mutton Pakora", time: "45 min", difficulty: "Hard", category: "non-veg", desc: "Minced mutton in spiced coating" },
+      { name: "Beef Pakora", time: "45 min", difficulty: "Hard", category: "non-veg", desc: "Tender beef pieces fried" },
+      { name: "Keema Pakora", time: "40 min", difficulty: "Medium", category: "non-veg", desc: "Spiced minced meat fritters" },
+      { name: "Noodle Pakora", time: "30 min", difficulty: "Easy", category: "vegan", desc: "Crispy noodles in batter" },
+      { name: "Rice Pakora", time: "35 min", difficulty: "Medium", category: "vegan", desc: "Leftover rice transformed" },
+      { name: "Dal Pakora (Lentil)", time: "40 min", difficulty: "Medium", category: "vegan", desc: "Soaked lentils ground and fried" },
+      { name: "Moong Dal Pakora", time: "40 min", difficulty: "Medium", category: "vegan", desc: "Yellow lentil fritters" },
+      { name: "Chana Dal Pakora", time: "40 min", difficulty: "Medium", category: "vegan", desc: "Split chickpea fritters" },
+      { name: "Masoor Dal Pakora", time: "40 min", difficulty: "Medium", category: "vegan", desc: "Red lentil pakoras" },
+      { name: "Urad Dal Pakora (Vada)", time: "45 min", difficulty: "Medium", category: "vegan", desc: "Black lentil fritters" },
+      { name: "Sabudana Pakora", time: "30 min", difficulty: "Easy", category: "vegan", desc: "Tapioca pearls crispy fried" },
+      { name: "Poha Pakora", time: "25 min", difficulty: "Easy", category: "vegan", desc: "Flattened rice fritters" },
+      { name: "Vermicelli Pakora", time: "30 min", difficulty: "Easy", category: "vegan", desc: "Crispy vermicelli snack" },
+      { name: "Maggi Pakora", time: "25 min", difficulty: "Easy", category: "vegan", desc: "Instant noodles in batter" },
+      { name: "Pasta Pakora", time: "30 min", difficulty: "Easy", category: "vegan", desc: "Leftover pasta fried crispy" },
+      { name: "Tofu Pakora", time: "30 min", difficulty: "Easy", category: "vegan", desc: "Firm tofu in spiced coating" },
+      { name: "Soya Chunks Pakora", time: "35 min", difficulty: "Medium", category: "vegan", desc: "Protein-rich soya fritters" },
+      { name: "Jackfruit Pakora", time: "35 min", difficulty: "Medium", category: "vegan", desc: "Raw jackfruit pieces fried" },
+      { name: "Lotus Stem Pakora", time: "35 min", difficulty: "Medium", category: "vegan", desc: "Sliced lotus stem crispy" },
+      { name: "Baby Corn Pakora", time: "30 min", difficulty: "Easy", category: "vegan", desc: "Whole baby corn fried" },
+      { name: "Broccoli Pakora", time: "30 min", difficulty: "Easy", category: "vegan", desc: "Broccoli florets in batter" },
+      { name: "Asparagus Pakora", time: "25 min", difficulty: "Easy", category: "vegan", desc: "Tender asparagus spears fried" },
+      { name: "Green Bean Pakora", time: "25 min", difficulty: "Easy", category: "vegan", desc: "French beans in gram flour" },
+      { name: "Okra Pakora (Bhindi)", time: "30 min", difficulty: "Easy", category: "vegan", desc: "Sliced okra crispy fried" },
+      { name: "Sweet Potato Pakora", time: "30 min", difficulty: "Easy", category: "vegan", desc: "Sweet potato slices fried" },
+      { name: "Yam Pakora (Arbi)", time: "35 min", difficulty: "Medium", category: "vegan", desc: "Colocasia slices in batter" }
+    ];
+
+    let currentFilter = 'all';
+    let currentSearch = '';
+
+    function renderRecipes(filter = 'all', searchTerm = '') {
+      const grid = document.getElementById('recipes-grid');
+      const noResults = document.getElementById('no-results');
+      const resultsCount = document.getElementById('results-count');
+      grid.innerHTML = '';
+      
+      let filtered = filter === 'all' ? recipes : recipes.filter(r => r.category === filter);
+      
+      if (searchTerm) {
+        const search = searchTerm.toLowerCase();
+        filtered = filtered.filter(r => 
+          r.name.toLowerCase().includes(search) || 
+          r.desc.toLowerCase().includes(search) ||
+          r.category.toLowerCase().includes(search)
+        );
+      }
+      
+      if (filtered.length === 0) {
+        noResults.classList.remove('hidden');
+        resultsCount.textContent = '';
+      } else {
+        noResults.classList.add('hidden');
+        resultsCount.textContent = `Showing ${filtered.length} recipe${filtered.length !== 1 ? 's' : ''}`;
+        
+        filtered.forEach(recipe => {
+          const card = `
+            <div class="recipe-card bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-6 hover:shadow-[0_25px_60px_rgba(0,0,0,0.08)] transition transform hover:-translate-y-1">
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-4 py-1 bg-orange-100 text-orange-600 rounded-full text-sm font-medium">${recipe.category}</span>
+                <span class="text-gray-500 text-sm"><i class="far fa-clock"></i> ${recipe.time}</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">${recipe.name}</h3>
+              <p class="text-gray-600 mb-4">${recipe.desc}</p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-medium text-gray-700">Difficulty: <span class="text-orange-500">${recipe.difficulty}</span></span>
+                <button class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium transition">View Recipe</button>
+              </div>
+            </div>
+          `;
+          grid.innerHTML += card;
+        });
+      }
+    }
+
+    function filterRecipes(category) {
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      currentFilter = category;
+      renderRecipes(currentFilter, currentSearch);
+    }
+
+    function searchRecipes() {
+      currentSearch = document.getElementById('search-input').value;
+      renderRecipes(currentFilter, currentSearch);
+    }
+
+    renderRecipes();
+  </script>
+</body>
+</html>

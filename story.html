@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Story - Pakora Palace</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .floating-pakora { animation: float 6s ease-in-out infinite; }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+  </style>
+</head>
+<body class="min-h-screen bg-amber-50">
+
+  <!-- Floating Decorations -->
+  <div class="fixed top-20 left-10 w-16 h-16 opacity-20 animate-float" style="animation-delay: 0s;">
+    <img src="photo/pakora1.png" alt="" class="w-full h-full object-contain floating-pakora">
+  </div>
+  <div class="fixed top-40 right-12 w-20 h-20 opacity-15 animate-float" style="animation-delay: 2s;">
+    <img src="photo/pakora2.png" alt="" class="w-full h-full object-contain floating-pakora">
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-4 z-50 px-4">
+    <div class="max-w-7xl mx-auto bg-white/80 backdrop-blur-sm rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.08)] px-6 py-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center space-x-3">
+          <img src="photo/logo.png" alt="Pakora Palace Logo" class="w-12 h-12 rounded-full">
+          <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Pakora Palace</h1>
+        </div>
+        <nav class="mt-3 md:mt-0">
+          <ul class="flex flex-wrap justify-center space-x-4 md:space-x-6 text-sm md:text-base font-medium text-gray-700">
+            <li><a href="index.html#home" class="hover:text-orange-500 transition">Home</a></li>
+            <li><a href="index.html#menu" class="hover:text-orange-500 transition">Menu</a></li>
+            <li><a href="recipes.html" class="hover:text-orange-500 transition">Recipes</a></li>
+            <li><a href="about.html" class="hover:text-orange-500 transition">About</a></li>
+            <li><a href="story.html" class="text-orange-500 font-bold">Our Story</a></li>
+            <li><a href="offers.html" class="hover:text-orange-500 transition">Offers</a></li>
+            <li><a href="index.html#menu" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full transition">Order Now</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative py-20 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-orange-100 via-amber-50 to-orange-200"></div>
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <h2 class="text-4xl md:text-6xl font-bold mb-4 text-gray-800">Our Story</h2>
+      <p class="text-xl md:text-2xl text-gray-700">A Journey of Passion, Flavor & Tradition</p>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="py-16 bg-amber-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        
+        <!-- 2010 - The Beginning -->
+        <div class="relative pl-8 pb-12 border-l-4 border-orange-500">
+          <div class="absolute -left-4 top-0 w-8 h-8 bg-orange-500 rounded-full border-4 border-amber-50"></div>
+          <div class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8">
+            <span class="inline-block bg-orange-100 text-orange-600 px-4 py-1 rounded-full text-sm font-bold mb-4">2010</span>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">The Dream Begins</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Ahmed Khan, a young culinary enthusiast from Gulshan-e-Iqbal, had a dream. Growing up, he watched his grandmother prepare the most delicious pakoras every evening. The aroma, the crispy texture, the perfect blend of spices - it was magic.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              After years of working in various restaurants across Karachi, Ahmed decided it was time to share his grandmother's secret recipe with the world. With just ₨50,000 in savings, a single fryer, and an unshakeable belief in his dream, Pakora Palace was born in a small 200 sq ft shop.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2012 - First Milestone -->
+        <div class="relative pl-8 pb-12 border-l-4 border-orange-500">
+          <div class="absolute -left-4 top-0 w-8 h-8 bg-orange-500 rounded-full border-4 border-amber-50"></div>
+          <div class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8">
+            <span class="inline-block bg-orange-100 text-orange-600 px-4 py-1 rounded-full text-sm font-bold mb-4">2012</span>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Word Spreads</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Within two years, Pakora Palace became the talk of the neighborhood. People would line up every evening, waiting for their turn to taste the legendary pakoras. Ahmed's commitment to quality - using only fresh vegetables, premium gram flour, and his grandmother's secret spice blend - set him apart.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              The shop expanded to accommodate more customers, and Ahmed hired his first two employees. The family recipe was now feeding hundreds of families across Karachi.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2015 - Innovation -->
+        <div class="relative pl-8 pb-12 border-l-4 border-orange-500">
+          <div class="absolute -left-4 top-0 w-8 h-8 bg-orange-500 rounded-full border-4 border-amber-50"></div>
+          <div class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8">
+            <span class="inline-block bg-orange-100 text-orange-600 px-4 py-1 rounded-full text-sm font-bold mb-4">2015</span>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Expanding the Menu</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Ahmed began experimenting with new varieties. Chicken pakora, paneer pakora, and the now-famous Mix Pakora Platter were introduced. Each recipe was perfected over months of testing, ensuring it met the high standards set by the original vegetable pakora.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              The team grew to 8 members, and delivery service was launched. Pakora Palace was no longer just a shop - it was becoming a brand.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2018 - Recognition -->
+        <div class="relative pl-8 pb-12 border-l-4 border-orange-500">
+          <div class="absolute -left-4 top-0 w-8 h-8 bg-orange-500 rounded-full border-4 border-amber-50"></div>
+          <div class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8">
+            <span class="inline-block bg-orange-100 text-orange-600 px-4 py-1 rounded-full text-sm font-bold mb-4">2018</span>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Award-Winning Excellence</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Pakora Palace was featured in "Karachi's Best Street Food" by Dawn News and won the "People's Choice Award" for Best Pakoras in Karachi. Ahmed's dedication to maintaining quality while scaling the business was recognized across the city.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              Food bloggers, celebrities, and food critics started visiting. The small shop from Gulshan-e-Iqbal was now a culinary landmark.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2020 - Challenges & Resilience -->
+        <div class="relative pl-8 pb-12 border-l-4 border-orange-500">
+          <div class="absolute -left-4 top-0 w-8 h-8 bg-orange-500 rounded-full border-4 border-amber-50"></div>
+          <div class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8">
+            <span class="inline-block bg-orange-100 text-orange-600 px-4 py-1 rounded-full text-sm font-bold mb-4">2020</span>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Overcoming Adversity</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              The pandemic hit hard. Like many businesses, Pakora Palace faced unprecedented challenges. But Ahmed's response was swift - he pivoted to contactless delivery, introduced family combo packs, and launched an online ordering system.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              During lockdown, Pakora Palace provided free meals to healthcare workers and distributed food to those in need. The community that had supported them for years was now being supported back.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2023 - Digital Transformation -->
+        <div class="relative pl-8 pb-12 border-l-4 border-orange-500">
+          <div class="absolute -left-4 top-0 w-8 h-8 bg-orange-500 rounded-full border-4 border-amber-50"></div>
+          <div class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8">
+            <span class="inline-block bg-orange-100 text-orange-600 px-4 py-1 rounded-full text-sm font-bold mb-4">2023</span>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Going Digital</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Pakora Palace launched its official website and mobile app, making it easier than ever for customers to order their favorite pakoras. The business embraced technology while staying true to its traditional roots.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              Online orders now account for 60% of sales, and the customer base has expanded beyond Karachi, with people ordering for their loved ones across the city.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2025 - Present Day -->
+        <div class="relative pl-8">
+          <div class="absolute -left-4 top-0 w-8 h-8 bg-orange-500 rounded-full border-4 border-amber-50 animate-pulse"></div>
+          <div class="bg-gradient-to-br from-orange-500 to-orange-600 rounded-[40px] shadow-[0_20px_50px_rgba(249,115,22,0.3)] p-8 text-white">
+            <span class="inline-block bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full text-sm font-bold mb-4">2025 - TODAY</span>
+            <h3 class="text-2xl font-bold mb-4">The Journey Continues</h3>
+            <p class="leading-relaxed mb-4 opacity-90">
+              Today, Pakora Palace serves over 500 customers daily, employs 25 team members, and has become a household name in Karachi. But the mission remains the same - to serve the crispiest, most flavorful pakoras made with love and tradition.
+            </p>
+            <p class="leading-relaxed opacity-90">
+              Ahmed still personally oversees the spice blending every morning, ensuring every batch meets his grandmother's standards. Because at Pakora Palace, it's not just about food - it's about preserving memories, creating moments, and bringing families together.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet Chef Ahmed -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Meet Chef Ahmed Khan</h3>
+        <div class="bg-amber-50 rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="p-8 md:p-12">
+              <div class="w-48 h-48 bg-orange-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+                <i class="fas fa-user-chef text-white text-7xl"></i>
+              </div>
+            </div>
+            <div class="p-8 md:p-12">
+              <h4 class="text-2xl font-bold text-gray-800 mb-4">Ahmed Khan</h4>
+              <p class="text-orange-500 font-bold mb-4">Founder & Head Chef</p>
+              <p class="text-gray-600 leading-relaxed mb-4">
+                "My grandmother always said, 'Food made with love tastes different.' Every pakora we serve carries that love, that tradition, and that commitment to excellence."
+              </p>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                With over 15 years of culinary experience and a passion for preserving traditional Pakistani flavors, Ahmed has transformed a family recipe into a beloved Karachi institution.
+              </p>
+              <div class="space-y-3">
+                <div class="flex items-center text-gray-700">
+                  <i class="fas fa-award text-orange-500 mr-3"></i>
+                  <span>Best Chef Award 2018</span>
+                </div>
+                <div class="flex items-center text-gray-700">
+                  <i class="fas fa-certificate text-orange-500 mr-3"></i>
+                  <span>Culinary Excellence Certificate</span>
+                </div>
+                <div class="flex items-center text-gray-700">
+                  <i class="fas fa-star text-orange-500 mr-3"></i>
+                  <span>15+ Years Experience</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Philosophy -->
+  <section class="py-16 bg-amber-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Our Philosophy</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          
+          <div class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8 text-center">
+            <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-heart text-orange-500 text-3xl"></i>
+            </div>
+            <h4 class="text-xl font-bold text-gray-800 mb-3">Made with Love</h4>
+            <p class="text-gray-600">Every pakora is crafted with care, passion, and respect for tradition. We don't just cook - we create memories.</p>
+          </div>
+
+          <div class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8 text-center">
+            <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-leaf text-orange-500 text-3xl"></i>
+            </div>
+            <h4 class="text-xl font-bold text-gray-800 mb-3">Fresh & Natural</h4>
+            <p class="text-gray-600">We source fresh vegetables daily and use no artificial colors or preservatives. What you taste is pure, authentic flavor.</p>
+          </div>
+
+          <div class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8 text-center">
+            <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-users text-orange-500 text-3xl"></i>
+            </div>
+            <h4 class="text-xl font-bold text-gray-800 mb-3">Community First</h4>
+            <p class="text-gray-600">We're not just a business - we're part of the Karachi family. Your satisfaction and happiness drive everything we do.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Secret Recipe -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-gradient-to-br from-orange-500 to-orange-600 rounded-[40px] shadow-[0_20px_50px_rgba(249,115,22,0.3)] p-8 md:p-12 text-white text-center">
+          <i class="fas fa-lock text-6xl mb-6 opacity-80"></i>
+          <h3 class="text-3xl md:text-4xl font-bold mb-4">The Secret Recipe</h3>
+          <p class="text-xl mb-6 opacity-90">
+            Passed down through three generations, our secret spice blend is what makes Pakora Palace pakoras truly special. It's a closely guarded family secret that gives our pakoras their distinctive flavor.
+          </p>
+          <p class="text-lg opacity-80">
+            "Some secrets are meant to be tasted, not told." - Grandmother's wisdom
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- More Inspiring Stories -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">More Stories from Pakora Palace</h3>
+        
+        <!-- Story 1: Bilal's Journey -->
+        <div class="bg-amber-50 rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8 md:p-12 mb-8">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mr-4">B</div>
+            <div>
+              <h4 class="text-2xl font-bold text-gray-800">Bilal's Journey: From Dishwasher to Master Chef</h4>
+              <p class="text-orange-500 font-medium">Master Chef at Pakora Palace</p>
+            </div>
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Bilal Sheikh joined Pakora Palace in 2011 as a dishwasher. He was just 18 years old, fresh from his village in Punjab, with dreams of making it in the big city. Ahmed noticed Bilal's curiosity - he would always watch the chefs work, asking questions during breaks.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            "I saw hunger in his eyes," Ahmed recalls. "Not for food, but for knowledge." Ahmed started teaching Bilal the basics - how to cut vegetables, how to mix the batter, the importance of temperature control. Bilal was a quick learner.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Today, Bilal is our Master Chef, responsible for training new team members and maintaining our quality standards. He's perfected the art of the spice blend and can tell if a pakora is ready just by the sound of the sizzle.
+          </p>
+          <p class="text-gray-600 leading-relaxed italic">
+            "Ahmed bhai didn't just give me a job, he gave me a future. Now I'm sending my younger brother to college with what I earn here. This is my family." - Bilal Sheikh
+          </p>
+        </div>
+
+        <!-- Story 2: The Wedding Miracle -->
+        <div class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8 md:p-12 mb-8 border-2 border-orange-200">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center text-white text-2xl mr-4">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div>
+              <h4 class="text-2xl font-bold text-gray-800">The Wedding Day Miracle</h4>
+              <p class="text-pink-500 font-medium">A Story of Going Above & Beyond</p>
+            </div>
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            It was December 2019. Ayesha was getting married in two days, and her caterer had just canceled. In a panic, she called Pakora Palace at 11 PM, crying. She needed pakoras for 300 guests - her late mother's favorite food, and she wanted to honor her memory.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Ahmed and his team worked through the night. They sourced extra ingredients, brought in additional staff, and prepared everything fresh on the wedding day. They even created a special "Mother's Love" platter with Ayesha's mother's favorite varieties.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            When Ayesha tasted the pakoras, she broke down in tears. "It tastes exactly like my mother used to make them," she said. The entire wedding party praised the food, but for Ahmed, the real reward was seeing Ayesha smile on her special day.
+          </p>
+          <p class="text-gray-600 leading-relaxed italic">
+            "We don't just serve food, we serve emotions. That night, we served love and memories." - Ahmed Khan
+          </p>
+        </div>
+
+        <!-- Story 3: Fatima's Leadership -->
+        <div class="bg-amber-50 rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8 md:p-12 mb-8">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mr-4">F</div>
+            <div>
+              <h4 class="text-2xl font-bold text-gray-800">Fatima's Rise: Breaking Barriers</h4>
+              <p class="text-purple-500 font-medium">Operations Manager</p>
+            </div>
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            In 2016, Fatima Ali walked into Pakora Palace asking for a job. As a single mother of two, she needed work desperately. But she had no experience in the food industry. Ahmed saw something special in her determination and organizational skills.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Starting as a customer service representative, Fatima revolutionized how orders were managed. She introduced a digital tracking system, improved delivery routes, and created a customer feedback loop that helped improve service quality.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Within three years, she became Operations Manager. Under her leadership, customer satisfaction increased by 40%, and delivery times improved by 25%. She's also mentored five other women who now work at Pakora Palace.
+          </p>
+          <p class="text-gray-600 leading-relaxed italic">
+            "Ahmed bhai believed in me when no one else did. Now I want to be that person for other women who need a chance." - Fatima Ali
+          </p>
+        </div>
+
+        <!-- Story 4: The Flood Relief Story -->
+        <div class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8 md:p-12 mb-8 border-2 border-blue-200">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white text-2xl mr-4">
+              <i class="fas fa-hands-helping"></i>
+            </div>
+            <div>
+              <h4 class="text-2xl font-bold text-gray-800">When Karachi Flooded: A Community Comes Together</h4>
+              <p class="text-blue-500 font-medium">August 2020</p>
+            </div>
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            The monsoon rains of August 2020 devastated parts of Karachi. Thousands were displaced, homes were destroyed, and people were hungry. Pakora Palace's own shop was flooded with two feet of water.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Instead of closing down to clean up, Ahmed made a decision: "We'll clean later. People need food now." The team set up temporary cooking stations on higher ground and started preparing meals. For three weeks, Pakora Palace served free food to flood victims.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            The community rallied. Regular customers donated money and ingredients. Volunteers helped with cooking and distribution. Together, they served over 10,000 meals. When asked about the financial loss, Ahmed simply said, "Money comes and goes. But humanity? That's forever."
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            The story went viral on social media. News channels covered it. But for Ahmed and his team, the real reward was seeing families eat hot meals during their darkest hours.
+          </p>
+          <p class="text-gray-600 leading-relaxed italic">
+            "Karachi gave us everything. When Karachi needed us, how could we not give back?" - Ahmed Khan
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Testimonials -->
+  <section class="py-16 bg-amber-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">What Our Customers Say</h3>
+        <div class="grid md:grid-cols-2 gap-8">
+          
+          <div class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold mr-4">S</div>
+              <div>
+                <p class="font-bold text-gray-800">Sarah Ahmed</p>
+                <div class="text-orange-500">★★★★★</div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">"I've been ordering from Pakora Palace for 5 years. The quality never drops, the taste is always perfect. It reminds me of my mother's cooking!"</p>
+          </div>
+
+          <div class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold mr-4">A</div>
+              <div>
+                <p class="font-bold text-gray-800">Ali Raza</p>
+                <div class="text-orange-500">★★★★★</div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">"Best pakoras in Karachi, hands down! The chicken pakora is my favorite. Ahmed bhai's dedication to quality shows in every bite."</p>
+          </div>
+
+          <div class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold mr-4">F</div>
+              <div>
+                <p class="font-bold text-gray-800">Fatima Khan</p>
+                <div class="text-orange-500">★★★★★</div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">"During Ramadan, their iftar packages are a lifesaver! Always delivered on time, always hot and crispy. Thank you Pakora Palace!"</p>
+          </div>
+
+          <div class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold mr-4">M</div>
+              <div>
+                <p class="font-bold text-gray-800">Muhammad Bilal</p>
+                <div class="text-orange-500">★★★★★</div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">"I ordered for my daughter's birthday party. Everyone loved it! The mix platter was a huge hit. Will definitely order again!"</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto bg-gradient-to-br from-orange-100 to-orange-200 rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-12 text-center">
+        <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Become Part of Our Story</h3>
+        <p class="text-xl text-gray-700 mb-8">Experience the tradition, taste the passion, and create your own memories with Pakora Palace.</p>
+        <a href="index.html#menu" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-full text-lg transition transform hover:scale-105 shadow-[0_10px_30px_rgba(249,115,22,0.3)]">
+          Order Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4 text-center">
+      <p class="mb-4">📞 Call us: <a href="tel:+923001234567" class="text-orange-500 hover:underline">+92 300 1234567</a></p>
+      <p>&copy; 2025 Pakora Palace. All rights reserved. Made with ❤️ in Karachi.</p>
+    </div>
+  </footer>
+
+  <!-- Sidebar Popup -->
+  <div id="sidebarPopup" style="display: none; position: fixed; right: 20px; bottom: 20px; width: 320px; background: white; padding: 25px; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.2); z-index: 9999; animation: slideIn 0.5s ease;">
+    <button onclick="closeSidebarPopup()" style="position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 24px; color: #999; cursor: pointer;">&times;</button>
+    <h3 style="color: #f97316; font-size: 22px; font-weight: bold; margin-bottom: 12px;">🎉 Limited Offer!</h3>
+    <p style="color: #666; font-size: 15px; margin-bottom: 10px;">Get 15% OFF on your first order!</p>
+    <p style="background: #fed7aa; color: #f97316; font-size: 18px; font-weight: bold; padding: 10px; border-radius: 15px; margin-bottom: 15px; text-align: center;">FIRST15</p>
+    <button onclick="closeSidebarPopup(); window.location.href='index.html#menu'" style="width: 100%; background: #f97316; color: white; padding: 12px; border: none; border-radius: 20px; font-size: 16px; font-weight: bold; cursor: pointer; box-shadow: 0 8px 20px rgba(249,115,22,0.3);">Order Now</button>
+  </div>
+
+  <!-- Center Popup -->
+  <div id="discountPopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 9999; justify-content: center; align-items: center;">
+    <div style="background: white; padding: 40px; border-radius: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); max-width: 500px; text-align: center; position: relative;">
+      <button onclick="closePopup()" style="position: absolute; top: 15px; right: 20px; background: none; border: none; font-size: 30px; color: #999; cursor: pointer;">&times;</button>
+      <h2 style="color: #f97316; font-size: 32px; font-weight: bold; margin-bottom: 20px;">🎉 Special Offer!</h2>
+      <p style="color: #666; font-size: 18px; margin-bottom: 15px;">Get 15% OFF on your first order!</p>
+      <p style="background: #fed7aa; color: #f97316; font-size: 24px; font-weight: bold; padding: 15px; border-radius: 20px; margin-bottom: 25px;">Use Code: FIRST15</p>
+      <button onclick="closePopup(); window.location.href='index.html#menu'" style="background: #f97316; color: white; padding: 15px 40px; border: none; border-radius: 30px; font-size: 18px; font-weight: bold; cursor: pointer; box-shadow: 0 10px 30px rgba(249,115,22,0.3);">Order Now</button>
+    </div>
+  </div>
+
+  <style>
+    @keyframes slideIn {
+      from { transform: translateX(400px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+  </style>
+
+  <script>
+    setTimeout(function() {
+      document.getElementById('sidebarPopup').style.display = 'block';
+    }, 15000);
+
+    setTimeout(function() {
+      document.getElementById('discountPopup').style.display = 'flex';
+    }, 900000);
+
+    function closeSidebarPopup() {
+      document.getElementById('sidebarPopup').style.display = 'none';
+    }
+
+    function closePopup() {
+      document.getElementById('discountPopup').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>

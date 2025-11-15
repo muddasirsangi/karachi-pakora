@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog - Pakora Palace | Recipes & Cooking Tips</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-amber-50">
+
+  <!-- Header -->
+  <header class="sticky top-4 z-50 px-4">
+    <div class="max-w-7xl mx-auto bg-white/80 backdrop-blur-sm rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.08)] px-6 py-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center space-x-3">
+          <img src="photo/logo.png" alt="Pakora Palace Logo" class="w-12 h-12 rounded-full">
+          <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Pakora Palace</h1>
+        </div>
+        <nav class="mt-3 md:mt-0">
+          <ul class="flex flex-wrap justify-center space-x-4 md:space-x-6 text-sm md:text-base font-medium text-gray-700">
+            <li><a href="index.html" class="hover:text-orange-500 transition">Home</a></li>
+            <li><a href="index.html#menu" class="hover:text-orange-500 transition">Menu</a></li>
+            <li><a href="recipes.html" class="hover:text-orange-500 transition">Recipes</a></li>
+            <li><a href="about.html" class="hover:text-orange-500 transition">About</a></li>
+            <li><a href="story.html" class="hover:text-orange-500 transition">Our Story</a></li>
+            <li><a href="offers.html" class="hover:text-orange-500 transition">Offers</a></li>
+            <li><a href="blog.html" class="bg-orange-500 text-white px-4 py-2 rounded-full transition">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="py-16 md:py-24">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Pakora Palace Blog</h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">Discover authentic recipes, cooking tips, and the secrets behind perfect pakoras</p>
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <section class="py-8 pb-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Blog Post 1 -->
+        <article class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden hover:shadow-[0_25px_60px_rgba(0,0,0,0.08)] transition transform hover:-translate-y-1">
+          <div class="h-56 bg-gradient-to-br from-orange-200 to-amber-300 relative overflow-hidden">
+            <img src="photo/veg-pakora.jpg" alt="Perfect Pakora Batter" class="w-full h-full object-cover">
+            <div class="absolute top-4 left-4 bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+              <i class="fas fa-book-open mr-2"></i>Recipe
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 mb-3">
+              <i class="fas fa-calendar mr-2"></i>
+              <span>November 10, 2025</span>
+              <span class="mx-2">•</span>
+              <i class="fas fa-clock mr-2"></i>
+              <span>5 min read</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">The Secret to Perfect Pakora Batter</h3>
+            <p class="text-gray-600 mb-4">Learn the exact ratio of gram flour to water, and the secret ingredients that make our pakoras extra crispy and delicious.</p>
+            <a href="blog-post-1.html" class="inline-flex items-center text-orange-500 font-medium hover:text-orange-600 transition">
+              Read More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog Post 2 -->
+        <article class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden hover:shadow-[0_25px_60px_rgba(0,0,0,0.08)] transition transform hover:-translate-y-1">
+          <div class="h-56 bg-gradient-to-br from-green-200 to-emerald-300 relative overflow-hidden">
+            <img src="photo/chicken-pakora.jpg" alt="Spice Blends" class="w-full h-full object-cover">
+            <div class="absolute top-4 left-4 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+              <i class="fas fa-lightbulb mr-2"></i>Tips
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 mb-3">
+              <i class="fas fa-calendar mr-2"></i>
+              <span>November 8, 2025</span>
+              <span class="mx-2">•</span>
+              <i class="fas fa-clock mr-2"></i>
+              <span>4 min read</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">10 Spice Blends for Flavorful Pakoras</h3>
+            <p class="text-gray-600 mb-4">Discover traditional Pakistani spice combinations that will take your pakoras from good to absolutely irresistible.</p>
+            <a href="blog-post-2.html" class="inline-flex items-center text-orange-500 font-medium hover:text-orange-600 transition">
+              Read More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog Post 3 -->
+        <article class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden hover:shadow-[0_25px_60px_rgba(0,0,0,0.08)] transition transform hover:-translate-y-1">
+          <div class="h-56 bg-gradient-to-br from-red-200 to-pink-300 relative overflow-hidden">
+            <img src="photo/aloo-pakora.jpg" alt="Crispy Pakoras" class="w-full h-full object-cover">
+            <div class="absolute top-4 left-4 bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+              <i class="fas fa-fire mr-2"></i>Guide
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 mb-3">
+              <i class="fas fa-calendar mr-2"></i>
+              <span>November 5, 2025</span>
+              <span class="mx-2">•</span>
+              <i class="fas fa-clock mr-2"></i>
+              <span>6 min read</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">How to Keep Pakoras Crispy for Hours</h3>
+            <p class="text-gray-600 mb-4">Professional tips on frying temperature, oil selection, and storage methods to maintain that perfect crunch.</p>
+            <a href="blog-post-3.html" class="inline-flex items-center text-orange-500 font-medium hover:text-orange-600 transition">
+              Read More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog Post 4 -->
+        <article class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden hover:shadow-[0_25px_60px_rgba(0,0,0,0.08)] transition transform hover:-translate-y-1">
+          <div class="h-56 bg-gradient-to-br from-purple-200 to-indigo-300 relative overflow-hidden">
+            <img src="photo/paneer-pakora.jpg" alt="Ramadan Special" class="w-full h-full object-cover">
+            <div class="absolute top-4 left-4 bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+              <i class="fas fa-star mr-2"></i>Special
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 mb-3">
+              <i class="fas fa-calendar mr-2"></i>
+              <span>November 1, 2025</span>
+              <span class="mx-2">•</span>
+              <i class="fas fa-clock mr-2"></i>
+              <span>7 min read</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">Best Pakoras for Ramadan Iftar</h3>
+            <p class="text-gray-600 mb-4">A complete guide to preparing delicious pakoras for iftar, including make-ahead tips and serving suggestions.</p>
+            <a href="blog-post-4.html" class="inline-flex items-center text-orange-500 font-medium hover:text-orange-600 transition">
+              Read More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog Post 5 -->
+        <article class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden hover:shadow-[0_25px_60px_rgba(0,0,0,0.08)] transition transform hover:-translate-y-1">
+          <div class="h-56 bg-gradient-to-br from-yellow-200 to-orange-300 relative overflow-hidden">
+            <img src="photo/mix-pakora.jpg" alt="Chutney Recipes" class="w-full h-full object-cover">
+            <div class="absolute top-4 left-4 bg-yellow-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+              <i class="fas fa-book-open mr-2"></i>Recipe
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 mb-3">
+              <i class="fas fa-calendar mr-2"></i>
+              <span>October 28, 2025</span>
+              <span class="mx-2">•</span>
+              <i class="fas fa-clock mr-2"></i>
+              <span>5 min read</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">5 Authentic Chutney Recipes</h3>
+            <p class="text-gray-600 mb-4">From mint to tamarind, learn how to make the perfect chutneys that complement your pakoras beautifully.</p>
+            <a href="blog-post-5.html" class="inline-flex items-center text-orange-500 font-medium hover:text-orange-600 transition">
+              Read More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog Post 6 -->
+        <article class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden hover:shadow-[0_25px_60px_rgba(0,0,0,0.08)] transition transform hover:-translate-y-1">
+          <div class="h-56 bg-gradient-to-br from-blue-200 to-cyan-300 relative overflow-hidden">
+            <img src="photo/chutney.jpg" alt="Healthy Pakoras" class="w-full h-full object-cover">
+            <div class="absolute top-4 left-4 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+              <i class="fas fa-heart mr-2"></i>Health
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-500 mb-3">
+              <i class="fas fa-calendar mr-2"></i>
+              <span>October 25, 2025</span>
+              <span class="mx-2">•</span>
+              <i class="fas fa-clock mr-2"></i>
+              <span>6 min read</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">Making Healthier Pakoras at Home</h3>
+            <p class="text-gray-600 mb-4">Tips for reducing oil absorption, using air fryers, and adding nutritious ingredients without sacrificing taste.</p>
+            <a href="blog-post-6.html" class="inline-flex items-center text-orange-500 font-medium hover:text-orange-600 transition">
+              Read More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto bg-gradient-to-br from-orange-100 to-amber-100 rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8 md:p-12 text-center">
+        <i class="fas fa-envelope text-5xl text-orange-500 mb-4"></i>
+        <h3 class="text-3xl font-bold text-gray-800 mb-4">Subscribe to Our Newsletter</h3>
+        <p class="text-gray-600 mb-6">Get the latest recipes, cooking tips, and special offers delivered to your inbox!</p>
+        <form class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
+          <input type="email" placeholder="Enter your email" required class="flex-1 px-6 py-4 border border-gray-200 rounded-full focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+          <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-full transition transform hover:scale-105 shadow-[0_10px_30px_rgba(249,115,22,0.3)]">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Pakora Palace</h3>
+          <p class="text-gray-400">Serving the finest pakoras in Karachi since 2010.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-orange-500 transition">Home</a></li>
+            <li><a href="index.html#menu" class="text-gray-400 hover:text-orange-500 transition">Menu</a></li>
+            <li><a href="recipes.html" class="text-gray-400 hover:text-orange-500 transition">Recipes</a></li>
+            <li><a href="blog.html" class="text-gray-400 hover:text-orange-500 transition">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Contact</h3>
+          <p class="text-gray-400 mb-2">Shop #5, Block 13-C, Gulshan-e-Iqbal</p>
+          <p class="text-gray-400 mb-2">Phone: +92 300 1234567</p>
+          <p class="text-gray-400">Open Daily: 4:00 PM - 11:00 PM</p>
+        </div>
+      </div>
+      <div class="text-center mt-8 pt-8 border-t border-gray-700">
+        <p>&copy; 2025 Pakora Palace. All rights reserved. Made with ❤️ in Karachi.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

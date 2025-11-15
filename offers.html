@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Special Offers - Pakora Palace</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .floating-pakora { animation: float 6s ease-in-out infinite; }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+    .deal-badge { animation: pulse 2s infinite; }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+  </style>
+</head>
+<body class="min-h-screen bg-amber-50">
+
+  <!-- Floating Decorations -->
+  <div class="fixed top-20 left-10 w-16 h-16 opacity-20 animate-float" style="animation-delay: 0s;">
+    <img src="photo/pakora1.png" alt="" class="w-full h-full object-contain floating-pakora">
+  </div>
+  <div class="fixed top-40 right-12 w-20 h-20 opacity-15 animate-float" style="animation-delay: 2s;">
+    <img src="photo/pakora2.png" alt="" class="w-full h-full object-contain floating-pakora">
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-4 z-50 px-4">
+    <div class="max-w-7xl mx-auto bg-white/80 backdrop-blur-sm rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.08)] px-6 py-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center space-x-3">
+          <img src="photo/logo.png" alt="Pakora Palace Logo" class="w-12 h-12 rounded-full">
+          <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Pakora Palace</h1>
+        </div>
+        <nav class="mt-3 md:mt-0">
+          <ul class="flex flex-wrap justify-center space-x-4 md:space-x-6 text-sm md:text-base font-medium text-gray-700">
+            <li><a href="index.html#home" class="hover:text-orange-500 transition">Home</a></li>
+            <li><a href="index.html#menu" class="hover:text-orange-500 transition">Menu</a></li>
+            <li><a href="recipes.html" class="hover:text-orange-500 transition">Recipes</a></li>
+            <li><a href="about.html" class="hover:text-orange-500 transition">About</a></li>
+            <li><a href="story.html" class="hover:text-orange-500 transition">Our Story</a></li>
+            <li><a href="offers.html" class="text-orange-500 font-bold">Offers</a></li>
+            <li><a href="index.html#menu" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full transition">Order Now</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative py-20 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-orange-100 via-amber-50 to-orange-200"></div>
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <h2 class="text-4xl md:text-6xl font-bold mb-4 text-gray-800">Special Offers & Deals</h2>
+      <p class="text-xl md:text-2xl text-gray-700">Save Big on Your Favorite Pakoras!</p>
+    </div>
+  </section>
+
+  <!-- First-Time Customer Discount -->
+  <section class="py-16 bg-amber-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-[40px] shadow-[0_20px_50px_rgba(34,197,94,0.3)] p-8 md:p-12 text-white relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32"></div>
+          <div class="relative z-10">
+            <div class="inline-block bg-white text-green-600 px-6 py-2 rounded-full font-bold mb-4 deal-badge">
+              <i class="fas fa-gift mr-2"></i>NEW CUSTOMER SPECIAL
+            </div>
+            <h3 class="text-3xl md:text-5xl font-bold mb-4">Welcome Offer: 25% OFF</h3>
+            <p class="text-xl mb-6 opacity-90">First-time ordering? Get 25% off your entire order!</p>
+            <div class="flex flex-col md:flex-row gap-4 items-start md:items-center">
+              <div class="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
+                <span class="font-mono text-2xl font-bold">WELCOME25</span>
+              </div>
+              <p class="text-sm opacity-90">Use this code at checkout</p>
+            </div>
+            <p class="mt-6 text-sm opacity-75">*Valid for orders above ₨500. One-time use only.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Daily Deals -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Daily Deals</h3>
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+        
+        <!-- Monday Deal -->
+        <div class="bg-amber-50 rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8 hover:shadow-[0_25px_60px_rgba(0,0,0,0.08)] transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="bg-orange-500 text-white px-4 py-2 rounded-full font-bold">MONDAY</span>
+            <span class="text-3xl">🌟</span>
+          </div>
+          <h4 class="text-2xl font-bold text-gray-800 mb-3">Manic Monday</h4>
+          <p class="text-gray-600 mb-4">Start your week right with 20% off all Vegetable Pakoras!</p>
+          <div class="bg-white rounded-3xl p-4">
+            <p class="text-sm text-gray-600">Regular: <span class="line-through">₨250</span></p>
+            <p class="text-2xl font-bold text-orange-500">Today: ₨200</p>
+          </div>
+        </div>
+
+        <!-- Tuesday Deal -->
+        <div class="bg-amber-50 rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8 hover:shadow-[0_25px_60px_rgba(0,0,0,0.08)] transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="bg-orange-500 text-white px-4 py-2 rounded-full font-bold">TUESDAY</span>
+            <span class="text-3xl">🍗</span>
+          </div>
+          <h4 class="text-2xl font-bold text-gray-800 mb-3">Tasty Tuesday</h4>
+          <p class="text-gray-600 mb-4">Chicken Pakora lovers rejoice! Get 15% off today.</p>
+          <div class="bg-white rounded-3xl p-4">
+            <p class="text-sm text-gray-600">Regular: <span class="line-through">₨450</span></p>
+            <p class="text-2xl font-bold text-orange-500">Today: ₨383</p>
+          </div>
+        </div>
+
+        <!-- Wednesday Deal -->
+        <div class="bg-amber-50 rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8 hover:shadow-[0_25px_60px_rgba(0,0,0,0.08)] transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="bg-orange-500 text-white px-4 py-2 rounded-full font-bold">WEDNESDAY</span>
+            <span class="text-3xl">🎉</span>
+          </div>
+          <h4 class="text-2xl font-bold text-gray-800 mb-3">Midweek Madness</h4>
+          <p class="text-gray-600 mb-4">Buy 2 Get 1 Free on any Pakora variety!</p>
+          <div class="bg-white rounded-3xl p-4">
+            <p class="text-lg font-bold text-orange-500">Buy 2, Get 1 FREE</p>
+            <p class="text-sm text-gray-600 mt-1">Lowest priced item free</p>
+          </div>
+        </div>
+
+        <!-- Thursday Deal -->
+        <div class="bg-amber-50 rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8 hover:shadow-[0_25px_60px_rgba(0,0,0,0.08)] transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="bg-orange-500 text-white px-4 py-2 rounded-full font-bold">THURSDAY</span>
+            <span class="text-3xl">👨‍👩‍👧‍👦</span>
+          </div>
+          <h4 class="text-2xl font-bold text-gray-800 mb-3">Family Thursday</h4>
+          <p class="text-gray-600 mb-4">Mix Pakora Platter at special family price!</p>
+          <div class="bg-white rounded-3xl p-4">
+            <p class="text-sm text-gray-600">Regular: <span class="line-through">₨850</span></p>
+            <p class="text-2xl font-bold text-orange-500">Today: ₨700</p>
+          </div>
+        </div>
+
+        <!-- Friday Deal -->
+        <div class="bg-amber-50 rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8 hover:shadow-[0_25px_60px_rgba(0,0,0,0.08)] transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="bg-orange-500 text-white px-4 py-2 rounded-full font-bold">FRIDAY</span>
+            <span class="text-3xl">🎊</span>
+          </div>
+          <h4 class="text-2xl font-bold text-gray-800 mb-3">Fantastic Friday</h4>
+          <p class="text-gray-600 mb-4">Free Mint Chutney with every order above ₨500!</p>
+          <div class="bg-white rounded-3xl p-4">
+            <p class="text-lg font-bold text-orange-500">FREE Chutney</p>
+            <p class="text-sm text-gray-600 mt-1">Worth ₨80</p>
+          </div>
+        </div>
+
+        <!-- Weekend Deal -->
+        <div class="bg-amber-50 rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8 hover:shadow-[0_25px_60px_rgba(0,0,0,0.08)] transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="bg-orange-500 text-white px-4 py-2 rounded-full font-bold">SAT & SUN</span>
+            <span class="text-3xl">🌈</span>
+          </div>
+          <h4 class="text-2xl font-bold text-gray-800 mb-3">Weekend Special</h4>
+          <p class="text-gray-600 mb-4">Flat 10% off on all orders. No minimum!</p>
+          <div class="bg-white rounded-3xl p-4">
+            <p class="text-lg font-bold text-orange-500">10% OFF Everything</p>
+            <p class="text-sm text-gray-600 mt-1">All weekend long</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Combo Offers -->
+  <section class="py-16 bg-amber-50">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Combo Offers</h3>
+      <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+
+        <!-- Combo 1 -->
+        <div class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden hover:shadow-[0_25px_60px_rgba(0,0,0,0.08)] transition">
+          <div class="bg-gradient-to-br from-orange-400 to-orange-500 p-6 text-white text-center">
+            <div class="text-4xl mb-2">🌟</div>
+            <h4 class="text-2xl font-bold">Starter Combo</h4>
+            <p class="text-sm opacity-90 mt-1">Perfect for 2 people</p>
+          </div>
+          <div class="p-6">
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-center text-gray-700">
+                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                <span>1x Vegetable Pakora</span>
+              </li>
+              <li class="flex items-center text-gray-700">
+                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                <span>1x Aloo Pakora</span>
+              </li>
+              <li class="flex items-center text-gray-700">
+                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                <span>1x Mint Chutney</span>
+              </li>
+            </ul>
+            <div class="border-t pt-4">
+              <p class="text-sm text-gray-600">Regular Price: <span class="line-through">₨530</span></p>
+              <p class="text-3xl font-bold text-orange-500 mb-4">₨450</p>
+              <p class="text-green-600 font-bold mb-4">Save ₨80!</p>
+              <button class="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-full font-medium transition">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Combo 2 -->
+        <div class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden hover:shadow-[0_25px_60px_rgba(0,0,0,0.08)] transition border-4 border-orange-500 relative">
+          <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold deal-badge">POPULAR</div>
+          <div class="bg-gradient-to-br from-orange-500 to-orange-600 p-6 text-white text-center">
+            <div class="text-4xl mb-2">🔥</div>
+            <h4 class="text-2xl font-bold">Family Feast</h4>
+            <p class="text-sm opacity-90 mt-1">Perfect for 4-5 people</p>
+          </div>
+          <div class="p-6">
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-center text-gray-700">
+                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                <span>1x Mix Pakora Platter</span>
+              </li>
+              <li class="flex items-center text-gray-700">
+                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                <span>1x Chicken Pakora</span>
+              </li>
+              <li class="flex items-center text-gray-700">
+                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                <span>2x Mint Chutney</span>
+              </li>
+              <li class="flex items-center text-gray-700">
+                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                <span>FREE Delivery</span>
+              </li>
+            </ul>
+            <div class="border-t pt-4">
+              <p class="text-sm text-gray-600">Regular Price: <span class="line-through">₨1,460</span></p>
+              <p class="text-3xl font-bold text-orange-500 mb-4">₨1,200</p>
+              <p class="text-green-600 font-bold mb-4">Save ₨260!</p>
+              <button class="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-full font-medium transition">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Combo 3 -->
+        <div class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden hover:shadow-[0_25px_60px_rgba(0,0,0,0.08)] transition">
+          <div class="bg-gradient-to-br from-orange-600 to-orange-700 p-6 text-white text-center">
+            <div class="text-4xl mb-2">👑</div>
+            <h4 class="text-2xl font-bold">Party Pack</h4>
+            <p class="text-sm opacity-90 mt-1">Perfect for 8-10 people</p>
+          </div>
+          <div class="p-6">
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-center text-gray-700">
+                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                <span>2x Mix Pakora Platter</span>
+              </li>
+              <li class="flex items-center text-gray-700">
+                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                <span>2x Chicken Pakora</span>
+              </li>
+              <li class="flex items-center text-gray-700">
+                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                <span>1x Paneer Pakora</span>
+              </li>
+              <li class="flex items-center text-gray-700">
+                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                <span>4x Mint Chutney</span>
+              </li>
+              <li class="flex items-center text-gray-700">
+                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                <span>FREE Delivery</span>
+              </li>
+            </ul>
+            <div class="border-t pt-4">
+              <p class="text-sm text-gray-600">Regular Price: <span class="line-through">₨3,300</span></p>
+              <p class="text-3xl font-bold text-orange-500 mb-4">₨2,700</p>
+              <p class="text-green-600 font-bold mb-4">Save ₨600!</p>
+              <button class="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-full font-medium transition">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasonal Promotions -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Seasonal Promotions</h3>
+      <div class="max-w-6xl mx-auto space-y-8">
+
+        <!-- Ramadan Special -->
+        <div class="bg-gradient-to-br from-purple-500 to-purple-600 rounded-[40px] shadow-[0_20px_50px_rgba(168,85,247,0.3)] p-8 md:p-12 text-white relative overflow-hidden">
+          <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full -mr-48 -mb-48"></div>
+          <div class="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <div class="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-4">
+                🌙 RAMADAN SPECIAL
+              </div>
+              <h4 class="text-3xl md:text-4xl font-bold mb-4">Iftar Delights</h4>
+              <p class="text-lg mb-6 opacity-90">Special Iftar packages with 30% off during Ramadan. Pre-order for timely delivery!</p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center"><i class="fas fa-star text-yellow-300 mr-2"></i> Iftar Combo Packs</li>
+                <li class="flex items-center"><i class="fas fa-star text-yellow-300 mr-2"></i> Bulk Order Discounts</li>
+                <li class="flex items-center"><i class="fas fa-star text-yellow-300 mr-2"></i> Free Delivery on Orders ₨1000+</li>
+              </ul>
+              <button class="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3 rounded-full font-bold transition">Pre-Order Now</button>
+            </div>
+            <div class="text-center">
+              <div class="text-6xl mb-4">🌙</div>
+              <p class="text-2xl font-bold">30% OFF</p>
+              <p class="opacity-90">During Ramadan</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Monsoon Special -->
+        <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-[40px] shadow-[0_20px_50px_rgba(59,130,246,0.3)] p-8 md:p-12 text-white relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full -ml-48 -mt-48"></div>
+          <div class="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+            <div class="text-center order-2 md:order-1">
+              <div class="text-6xl mb-4">☔</div>
+              <p class="text-2xl font-bold">Rainy Day Special</p>
+              <p class="opacity-90">Hot & Crispy Delivered</p>
+            </div>
+            <div class="order-1 md:order-2">
+              <div class="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-4">
+                ☔ MONSOON MAGIC
+              </div>
+              <h4 class="text-3xl md:text-4xl font-bold mb-4">Rainy Day Cravings</h4>
+              <p class="text-lg mb-6 opacity-90">Nothing beats hot pakoras on a rainy day! Get 20% off during monsoon season.</p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center"><i class="fas fa-umbrella text-yellow-300 mr-2"></i> Extra Crispy Guarantee</li>
+                <li class="flex items-center"><i class="fas fa-umbrella text-yellow-300 mr-2"></i> Waterproof Packaging</li>
+                <li class="flex items-center"><i class="fas fa-umbrella text-yellow-300 mr-2"></i> Priority Delivery</li>
+              </ul>
+              <button class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-full font-bold transition">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Winter Special -->
+        <div class="bg-gradient-to-br from-red-500 to-red-600 rounded-[40px] shadow-[0_20px_50px_rgba(239,68,68,0.3)] p-8 md:p-12 text-white relative overflow-hidden">
+          <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full -mr-48 -mb-48"></div>
+          <div class="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <div class="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-4">
+                ❄️ WINTER WARMTH
+              </div>
+              <h4 class="text-3xl md:text-4xl font-bold mb-4">Winter Comfort Food</h4>
+              <p class="text-lg mb-6 opacity-90">Warm up this winter with our special hot & spicy pakora deals. 25% off all orders!</p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center"><i class="fas fa-fire text-yellow-300 mr-2"></i> Extra Spicy Options</li>
+                <li class="flex items-center"><i class="fas fa-fire text-yellow-300 mr-2"></i> Hot Chai Combo Available</li>
+                <li class="flex items-center"><i class="fas fa-fire text-yellow-300 mr-2"></i> Insulated Delivery Bags</li>
+              </ul>
+              <button class="bg-white text-red-600 hover:bg-gray-100 px-8 py-3 rounded-full font-bold transition">Warm Me Up!</button>
+            </div>
+            <div class="text-center">
+              <div class="text-6xl mb-4">❄️</div>
+              <p class="text-2xl font-bold">25% OFF</p>
+              <p class="opacity-90">All Winter Long</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Eid Special -->
+        <div class="bg-gradient-to-br from-pink-500 to-pink-600 rounded-[40px] shadow-[0_20px_50px_rgba(236,72,153,0.3)] p-8 md:p-12 text-white relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full -ml-48 -mt-48"></div>
+          <div class="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+            <div class="text-center order-2 md:order-1">
+              <div class="text-6xl mb-4">🎉</div>
+              <p class="text-2xl font-bold">Eid Mubarak!</p>
+              <p class="opacity-90">Celebrate with Pakoras</p>
+            </div>
+            <div class="order-1 md:order-2">
+              <div class="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-4">
+                🎉 EID CELEBRATION
+              </div>
+              <h4 class="text-3xl md:text-4xl font-bold mb-4">Eid Special Platters</h4>
+              <p class="text-lg mb-6 opacity-90">Make your Eid celebrations special with our exclusive party platters. 35% off!</p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center"><i class="fas fa-gift text-yellow-300 mr-2"></i> Premium Gift Packaging</li>
+                <li class="flex items-center"><i class="fas fa-gift text-yellow-300 mr-2"></i> Customizable Platters</li>
+                <li class="flex items-center"><i class="fas fa-gift text-yellow-300 mr-2"></i> Same-Day Delivery</li>
+              </ul>
+              <button class="bg-white text-pink-600 hover:bg-gray-100 px-8 py-3 rounded-full font-bold transition">Order for Eid</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Terms & Conditions -->
+  <section class="py-16 bg-amber-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-8">
+        <h3 class="text-2xl font-bold text-gray-800 mb-6">Terms & Conditions</h3>
+        <ul class="space-y-3 text-gray-600">
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-orange-500 mr-3 mt-1"></i>
+            <span>All offers are valid for online orders only through our website or phone.</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-orange-500 mr-3 mt-1"></i>
+            <span>Daily deals are applicable only on the specified day of the week.</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-orange-500 mr-3 mt-1"></i>
+            <span>Combo offers cannot be combined with other promotional codes.</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-orange-500 mr-3 mt-1"></i>
+            <span>Seasonal promotions are valid during the specified season/period only.</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-orange-500 mr-3 mt-1"></i>
+            <span>First-time customer discount is valid once per customer/phone number.</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-orange-500 mr-3 mt-1"></i>
+            <span>Pakora Palace reserves the right to modify or cancel offers without prior notice.</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-orange-500 mr-3 mt-1"></i>
+            <span>Free delivery applies to orders within 10km radius of our location.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4 text-center">
+      <p class="mb-4">📞 Call us: <a href="tel:+923001234567" class="text-orange-500 hover:underline">+92 300 1234567</a></p>
+      <p>&copy; 2025 Pakora Palace. All rights reserved. Made with ❤️ in Karachi.</p>
+    </div>
+  </footer>
+
+  <!-- Discount Popup -->
+  <div id="discountPopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 9999; justify-content: center; align-items: center;">
+    <div style="background: white; padding: 40px; border-radius: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); max-width: 500px; text-align: center; position: relative;">
+      <button onclick="closePopup()" style="position: absolute; top: 15px; right: 20px; background: none; border: none; font-size: 30px; color: #999; cursor: pointer;">&times;</button>
+      <h2 style="color: #f97316; font-size: 32px; font-weight: bold; margin-bottom: 20px;">🎉 Special Offer!</h2>
+      <p style="color: #666; font-size: 18px; margin-bottom: 15px;">Get 15% OFF on your first order!</p>
+      <p style="background: #fed7aa; color: #f97316; font-size: 24px; font-weight: bold; padding: 15px; border-radius: 20px; margin-bottom: 25px;">Use Code: FIRST15</p>
+      <button onclick="closePopup(); window.location.href='index.html#menu'" style="background: #f97316; color: white; padding: 15px 40px; border: none; border-radius: 30px; font-size: 18px; font-weight: bold; cursor: pointer; box-shadow: 0 10px 30px rgba(249,115,22,0.3);">Order Now</button>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(function() {
+      document.getElementById('discountPopup').style.display = 'flex';
+    }, 900000);
+
+    function closePopup() {
+      document.getElementById('discountPopup').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
